@@ -1,0 +1,151 @@
+---
+title: "Visualization workshop"
+subtitle: ""
+author: "Yikai Zhao"
+institute: "Texas A&M Universty"
+date: "updated: `r Sys.Date()`"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: ["shinobi", "ninjutsu"]
+    nature:
+      ratio: 16:10
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      
+---
+
+class: center, middle
+
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+---
+
+class: center, middle
+
+# Univariate plotting
+
+
+---
+
+```{r, echo = FALSE}
+source(file = "https://raw.githubusercontent.com/EvaMaeRey/little_flipbooks_library/master/xaringan_reveal_parentheses_balanced.R")
+```
+
+---
+
+```{r univariate, echo = FALSE, eval = F, fig.height=5, warning = FALSE }
+ggplot(iris, aes(x = Sepal.Length))+
+  geom_histogram(bins=50)+
+  theme_bw()+
+  geom_histogram(bins=30)+
+  geom_histogram(bins = 40)+
+  aes(fill = Species)+
+  scale_fill_brewer()+
+  labs(y = 'Number')
+```
+
+`r apply_reveal("univariate")`
+
+.footnote[[*] Other scale_fill_brewer options [give it a shot](http://www.cookbook-r.com/Graphs/Colors_(ggplot2)/) in the future.]
+
+---
+
+```{r density, echo=FALSE, eval=FALSE}
+ggplot(iris, aes(x = Sepal.Length))+
+  geom_density(alpha = 0.4)+
+  aes(color = Species)+
+  aes(fill = Species)+
+  theme_bw()+
+  scale_color_grey()+ 
+  theme_classic()+
+  scale_fill_brewer(palette="Dark2")
+```
+
+`r apply_reveal("density")`
+
+---
+```{r barplot, echo=FALSE, eval=FALSE}
+# Univariate variable visualization
+ggplot(iris, aes(x = Species, fill = Species))+
+  geom_bar()+
+  theme_bw()+
+  scale_color_grey()+ 
+  scale_fill_brewer(palette="Dark2")+
+  ylim(c(0, 75))
+```
+
+`r apply_reveal("barplot")`
+
+
+---
+class: center, middle
+
+
+# Bivariate visualization
+
+---
+
+```{r boxplot, echo = F, eval=FALSE}
+ggplot(iris, aes(x = Species, y = Sepal.Length))+
+  geom_boxplot()+
+  aes(color = Species)+
+  scale_color_brewer(palette="Dark2")+
+  geom_jitter(width = 0.2, height = 0.1, alpha = 0.6)+
+  theme_bw()
+```
+
+`r apply_reveal("boxplot")`
+
+---
+```{r dotplot, echo = F, eval=FALSE}
+ggplot(iris, aes(x = Sepal.Width, y = Sepal.Length))+
+  geom_point()+
+  aes(color = Species)+
+  scale_color_brewer(palette="Dark2")+
+  geom_jitter(width = 0.2, height = 0.1, alpha = 0.6)+
+  theme_bw()+
+  labs(col = "")
+```
+
+`r apply_reveal("dotplot")`
+
+---
+```{r facet_plot,eval=FALSE, include=FALSE, fig.height= 7, echo=FALSE, message=FALSE, results='hide' }
+
+ggplot(iris, aes(x = Sepal.Width, y = Sepal.Length))+
+  geom_point()+
+  aes(color = Species)+
+  scale_color_brewer(palette="Dark2")+
+  geom_jitter(width = 0.2, height = 0.1, alpha = 0.6)+
+  theme_bw()+
+  labs(col = "")+
+  facet_wrap(~Species)+
+  geom_smooth(se = F)+
+  geom_smooth(se= F, method = "lm", lty = "dotted")
+```
+
+
+`r apply_reveal("facet_plot")`
+
+---
+```{r}
+x <- iris[iris$Species == "setosa", ]$Sepal.Length
+y <- iris[iris$Species == "versicolor", ]$Sepal.Length
+tt <- t.test(x, y, paired = FALSE, alternative = "two.sided", var.equal = TRUE)
+
+tt
+```
+---
+
+
+```{r anova}
+fit_aov <- aov(Petal.Length ~ Species, iris)
+summary(fit_aov)
+```
+
+---
