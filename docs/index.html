@@ -39,6 +39,9 @@ class: center, middle
 
 
 
+
+
+
 class: split-40
 count: false
 .column[.content[
@@ -48,7 +51,7 @@ count: false
 ```
 ]]
 .column[.content[
-![](ppt_mtcars_files/figure-html/output_univariate_1-1.png)&lt;!-- --&gt;
+&lt;img src="index_files/figure-html/output_univariate_1-1.png" width="80%" style="display: block; margin: auto 0 auto auto;" /&gt;
 ]]
 ---
 class: split-40
@@ -61,7 +64,7 @@ ggplot(iris, aes(x = Sepal.Length))+
 ```
 ]]
 .column[.content[
-![](ppt_mtcars_files/figure-html/output_univariate_2-1.png)&lt;!-- --&gt;
+&lt;img src="index_files/figure-html/output_univariate_2-1.png" width="80%" style="display: block; margin: auto 0 auto auto;" /&gt;
 ]]
 ---
 class: split-40
@@ -75,7 +78,7 @@ ggplot(iris, aes(x = Sepal.Length))+
 ```
 ]]
 .column[.content[
-![](ppt_mtcars_files/figure-html/output_univariate_3-1.png)&lt;!-- --&gt;
+&lt;img src="index_files/figure-html/output_univariate_3-1.png" width="80%" style="display: block; margin: auto 0 auto auto;" /&gt;
 ]]
 ---
 class: split-40
@@ -90,7 +93,7 @@ ggplot(iris, aes(x = Sepal.Length))+
 ```
 ]]
 .column[.content[
-![](ppt_mtcars_files/figure-html/output_univariate_4-1.png)&lt;!-- --&gt;
+&lt;img src="index_files/figure-html/output_univariate_4-1.png" width="80%" style="display: block; margin: auto 0 auto auto;" /&gt;
 ]]
 ---
 class: split-40
@@ -106,7 +109,7 @@ ggplot(iris, aes(x = Sepal.Length))+
 ```
 ]]
 .column[.content[
-![](ppt_mtcars_files/figure-html/output_univariate_5-1.png)&lt;!-- --&gt;
+&lt;img src="index_files/figure-html/output_univariate_5-1.png" width="80%" style="display: block; margin: auto 0 auto auto;" /&gt;
 ]]
 ---
 class: split-40
@@ -123,7 +126,7 @@ ggplot(iris, aes(x = Sepal.Length))+
 ```
 ]]
 .column[.content[
-![](ppt_mtcars_files/figure-html/output_univariate_6-1.png)&lt;!-- --&gt;
+&lt;img src="index_files/figure-html/output_univariate_6-1.png" width="80%" style="display: block; margin: auto 0 auto auto;" /&gt;
 ]]
 ---
 class: split-40
@@ -141,7 +144,7 @@ ggplot(iris, aes(x = Sepal.Length))+
 ```
 ]]
 .column[.content[
-![](ppt_mtcars_files/figure-html/output_univariate_7-1.png)&lt;!-- --&gt;
+&lt;img src="index_files/figure-html/output_univariate_7-1.png" width="80%" style="display: block; margin: auto 0 auto auto;" /&gt;
 ]]
 ---
 class: split-40
@@ -160,7 +163,27 @@ ggplot(iris, aes(x = Sepal.Length))+
 ```
 ]]
 .column[.content[
-![](ppt_mtcars_files/figure-html/output_univariate_8-1.png)&lt;!-- --&gt;
+&lt;img src="index_files/figure-html/output_univariate_8-1.png" width="80%" style="display: block; margin: auto 0 auto auto;" /&gt;
+]]
+---
+class: split-40
+count: false
+.column[.content[
+
+```r
+ggplot(iris, aes(x = Sepal.Length))+  
+  geom_histogram(bins=50)+  
+  theme_bw()+  
+  geom_histogram(bins=30)+  
+  geom_histogram(bins = 40)+  
+  aes(fill = Species)+  
+  scale_fill_brewer()+  
+  labs(y = 'Number')+  
+* theme(legend.position="top")
+```
+]]
+.column[.content[
+&lt;img src="index_files/figure-html/output_univariate_9-1.png" width="80%" style="display: block; margin: auto 0 auto auto;" /&gt;
 ]]
 
 .footnote[[*] Other scale_fill_brewer options [give it a shot](http://www.cookbook-r.com/Graphs/Colors_(ggplot2)/) in the future.]
@@ -178,7 +201,7 @@ count: false
 ```
 ]]
 .column[.content[
-![](ppt_mtcars_files/figure-html/output_density_1-1.png)&lt;!-- --&gt;
+&lt;img src="index_files/figure-html/output_density_1-1.png" width="80%" style="display: block; margin: auto 0 auto auto;" /&gt;
 ]]
 ---
 class: split-40
@@ -191,7 +214,7 @@ ggplot(iris, aes(x = Sepal.Length))+
 ```
 ]]
 .column[.content[
-![](ppt_mtcars_files/figure-html/output_density_2-1.png)&lt;!-- --&gt;
+&lt;img src="index_files/figure-html/output_density_2-1.png" width="80%" style="display: block; margin: auto 0 auto auto;" /&gt;
 ]]
 ---
 class: split-40
@@ -205,7 +228,7 @@ ggplot(iris, aes(x = Sepal.Length))+
 ```
 ]]
 .column[.content[
-![](ppt_mtcars_files/figure-html/output_density_3-1.png)&lt;!-- --&gt;
+&lt;img src="index_files/figure-html/output_density_3-1.png" width="80%" style="display: block; margin: auto 0 auto auto;" /&gt;
 ]]
 ---
 class: split-40
@@ -220,7 +243,7 @@ ggplot(iris, aes(x = Sepal.Length))+
 ```
 ]]
 .column[.content[
-![](ppt_mtcars_files/figure-html/output_density_4-1.png)&lt;!-- --&gt;
+&lt;img src="index_files/figure-html/output_density_4-1.png" width="80%" style="display: block; margin: auto 0 auto auto;" /&gt;
 ]]
 ---
 class: split-40
@@ -236,7 +259,7 @@ ggplot(iris, aes(x = Sepal.Length))+
 ```
 ]]
 .column[.content[
-![](ppt_mtcars_files/figure-html/output_density_5-1.png)&lt;!-- --&gt;
+&lt;img src="index_files/figure-html/output_density_5-1.png" width="80%" style="display: block; margin: auto 0 auto auto;" /&gt;
 ]]
 ---
 class: split-40
@@ -253,7 +276,7 @@ ggplot(iris, aes(x = Sepal.Length))+
 ```
 ]]
 .column[.content[
-![](ppt_mtcars_files/figure-html/output_density_6-1.png)&lt;!-- --&gt;
+&lt;img src="index_files/figure-html/output_density_6-1.png" width="80%" style="display: block; margin: auto 0 auto auto;" /&gt;
 ]]
 ---
 class: split-40
@@ -271,7 +294,7 @@ ggplot(iris, aes(x = Sepal.Length))+
 ```
 ]]
 .column[.content[
-![](ppt_mtcars_files/figure-html/output_density_7-1.png)&lt;!-- --&gt;
+&lt;img src="index_files/figure-html/output_density_7-1.png" width="80%" style="display: block; margin: auto 0 auto auto;" /&gt;
 ]]
 ---
 class: split-40
@@ -290,7 +313,27 @@ ggplot(iris, aes(x = Sepal.Length))+
 ```
 ]]
 .column[.content[
-![](ppt_mtcars_files/figure-html/output_density_8-1.png)&lt;!-- --&gt;
+&lt;img src="index_files/figure-html/output_density_8-1.png" width="80%" style="display: block; margin: auto 0 auto auto;" /&gt;
+]]
+---
+class: split-40
+count: false
+.column[.content[
+
+```r
+ggplot(iris, aes(x = Sepal.Length))+  
+  geom_density(alpha = 0.4)+  
+  aes(color = Species)+  
+  aes(fill = Species)+  
+  theme_bw()+  
+  scale_color_grey()+  
+  theme_classic()+  
+  scale_fill_brewer(palette="Dark2")+  
+* theme(legend.position="top")
+```
+]]
+.column[.content[
+&lt;img src="index_files/figure-html/output_density_9-1.png" width="80%" style="display: block; margin: auto 0 auto auto;" /&gt;
 ]]
 
 ---
@@ -306,7 +349,7 @@ count: false
 ```
 ]]
 .column[.content[
-![](ppt_mtcars_files/figure-html/output_barplot_2-1.png)&lt;!-- --&gt;
+&lt;img src="index_files/figure-html/output_barplot_2-1.png" width="80%" style="display: block; margin: auto 0 auto auto;" /&gt;
 ]]
 ---
 class: split-40
@@ -320,7 +363,7 @@ ggplot(iris, aes(x = Species, fill = Species))+
 ```
 ]]
 .column[.content[
-![](ppt_mtcars_files/figure-html/output_barplot_3-1.png)&lt;!-- --&gt;
+&lt;img src="index_files/figure-html/output_barplot_3-1.png" width="80%" style="display: block; margin: auto 0 auto auto;" /&gt;
 ]]
 ---
 class: split-40
@@ -335,7 +378,7 @@ ggplot(iris, aes(x = Species, fill = Species))+
 ```
 ]]
 .column[.content[
-![](ppt_mtcars_files/figure-html/output_barplot_4-1.png)&lt;!-- --&gt;
+&lt;img src="index_files/figure-html/output_barplot_4-1.png" width="80%" style="display: block; margin: auto 0 auto auto;" /&gt;
 ]]
 ---
 class: split-40
@@ -351,7 +394,7 @@ ggplot(iris, aes(x = Species, fill = Species))+
 ```
 ]]
 .column[.content[
-![](ppt_mtcars_files/figure-html/output_barplot_5-1.png)&lt;!-- --&gt;
+&lt;img src="index_files/figure-html/output_barplot_5-1.png" width="80%" style="display: block; margin: auto 0 auto auto;" /&gt;
 ]]
 ---
 class: split-40
@@ -368,7 +411,7 @@ ggplot(iris, aes(x = Species, fill = Species))+
 ```
 ]]
 .column[.content[
-![](ppt_mtcars_files/figure-html/output_barplot_6-1.png)&lt;!-- --&gt;
+&lt;img src="index_files/figure-html/output_barplot_6-1.png" width="80%" style="display: block; margin: auto 0 auto auto;" /&gt;
 ]]
 ---
 class: split-40
@@ -386,7 +429,26 @@ ggplot(iris, aes(x = Species, fill = Species))+
 ```
 ]]
 .column[.content[
-![](ppt_mtcars_files/figure-html/output_barplot_7-1.png)&lt;!-- --&gt;
+&lt;img src="index_files/figure-html/output_barplot_7-1.png" width="80%" style="display: block; margin: auto 0 auto auto;" /&gt;
+]]
+---
+class: split-40
+count: false
+.column[.content[
+
+```r
+  # Univariate variable visualization
+ggplot(iris, aes(x = Species, fill = Species))+  
+  geom_bar()+  
+  theme_bw()+  
+  scale_color_grey()+  
+  scale_fill_brewer(palette="Dark2")+  
+  ylim(c(0, 75))+  
+* theme(legend.position="top")
+```
+]]
+.column[.content[
+&lt;img src="index_files/figure-html/output_barplot_8-1.png" width="80%" style="display: block; margin: auto 0 auto auto;" /&gt;
 ]]
 
 
@@ -409,7 +471,7 @@ count: false
 ```
 ]]
 .column[.content[
-![](ppt_mtcars_files/figure-html/output_boxplot_1-1.png)&lt;!-- --&gt;
+&lt;img src="index_files/figure-html/output_boxplot_1-1.png" width="80%" style="display: block; margin: auto 0 auto auto;" /&gt;
 ]]
 ---
 class: split-40
@@ -422,7 +484,7 @@ ggplot(iris, aes(x = Species, y = Sepal.Length))+
 ```
 ]]
 .column[.content[
-![](ppt_mtcars_files/figure-html/output_boxplot_2-1.png)&lt;!-- --&gt;
+&lt;img src="index_files/figure-html/output_boxplot_2-1.png" width="80%" style="display: block; margin: auto 0 auto auto;" /&gt;
 ]]
 ---
 class: split-40
@@ -436,7 +498,7 @@ ggplot(iris, aes(x = Species, y = Sepal.Length))+
 ```
 ]]
 .column[.content[
-![](ppt_mtcars_files/figure-html/output_boxplot_3-1.png)&lt;!-- --&gt;
+&lt;img src="index_files/figure-html/output_boxplot_3-1.png" width="80%" style="display: block; margin: auto 0 auto auto;" /&gt;
 ]]
 ---
 class: split-40
@@ -451,7 +513,7 @@ ggplot(iris, aes(x = Species, y = Sepal.Length))+
 ```
 ]]
 .column[.content[
-![](ppt_mtcars_files/figure-html/output_boxplot_4-1.png)&lt;!-- --&gt;
+&lt;img src="index_files/figure-html/output_boxplot_4-1.png" width="80%" style="display: block; margin: auto 0 auto auto;" /&gt;
 ]]
 ---
 class: split-40
@@ -467,7 +529,7 @@ ggplot(iris, aes(x = Species, y = Sepal.Length))+
 ```
 ]]
 .column[.content[
-![](ppt_mtcars_files/figure-html/output_boxplot_5-1.png)&lt;!-- --&gt;
+&lt;img src="index_files/figure-html/output_boxplot_5-1.png" width="80%" style="display: block; margin: auto 0 auto auto;" /&gt;
 ]]
 ---
 class: split-40
@@ -484,7 +546,25 @@ ggplot(iris, aes(x = Species, y = Sepal.Length))+
 ```
 ]]
 .column[.content[
-![](ppt_mtcars_files/figure-html/output_boxplot_6-1.png)&lt;!-- --&gt;
+&lt;img src="index_files/figure-html/output_boxplot_6-1.png" width="80%" style="display: block; margin: auto 0 auto auto;" /&gt;
+]]
+---
+class: split-40
+count: false
+.column[.content[
+
+```r
+ggplot(iris, aes(x = Species, y = Sepal.Length))+  
+  geom_boxplot()+  
+  aes(color = Species)+  
+  scale_color_brewer(palette="Dark2")+  
+  geom_jitter(width = 0.2, height = 0.1, alpha = 0.6)+  
+  theme_bw()+  
+* theme(legend.position="top")
+```
+]]
+.column[.content[
+&lt;img src="index_files/figure-html/output_boxplot_7-1.png" width="80%" style="display: block; margin: auto 0 auto auto;" /&gt;
 ]]
 
 ---
@@ -499,7 +579,7 @@ count: false
 ```
 ]]
 .column[.content[
-![](ppt_mtcars_files/figure-html/output_dotplot_1-1.png)&lt;!-- --&gt;
+&lt;img src="index_files/figure-html/output_dotplot_1-1.png" width="80%" style="display: block; margin: auto 0 auto auto;" /&gt;
 ]]
 ---
 class: split-40
@@ -512,7 +592,7 @@ ggplot(iris, aes(x = Sepal.Width, y = Sepal.Length))+
 ```
 ]]
 .column[.content[
-![](ppt_mtcars_files/figure-html/output_dotplot_2-1.png)&lt;!-- --&gt;
+&lt;img src="index_files/figure-html/output_dotplot_2-1.png" width="80%" style="display: block; margin: auto 0 auto auto;" /&gt;
 ]]
 ---
 class: split-40
@@ -526,7 +606,7 @@ ggplot(iris, aes(x = Sepal.Width, y = Sepal.Length))+
 ```
 ]]
 .column[.content[
-![](ppt_mtcars_files/figure-html/output_dotplot_3-1.png)&lt;!-- --&gt;
+&lt;img src="index_files/figure-html/output_dotplot_3-1.png" width="80%" style="display: block; margin: auto 0 auto auto;" /&gt;
 ]]
 ---
 class: split-40
@@ -541,7 +621,7 @@ ggplot(iris, aes(x = Sepal.Width, y = Sepal.Length))+
 ```
 ]]
 .column[.content[
-![](ppt_mtcars_files/figure-html/output_dotplot_4-1.png)&lt;!-- --&gt;
+&lt;img src="index_files/figure-html/output_dotplot_4-1.png" width="80%" style="display: block; margin: auto 0 auto auto;" /&gt;
 ]]
 ---
 class: split-40
@@ -557,7 +637,7 @@ ggplot(iris, aes(x = Sepal.Width, y = Sepal.Length))+
 ```
 ]]
 .column[.content[
-![](ppt_mtcars_files/figure-html/output_dotplot_5-1.png)&lt;!-- --&gt;
+&lt;img src="index_files/figure-html/output_dotplot_5-1.png" width="80%" style="display: block; margin: auto 0 auto auto;" /&gt;
 ]]
 ---
 class: split-40
@@ -574,7 +654,7 @@ ggplot(iris, aes(x = Sepal.Width, y = Sepal.Length))+
 ```
 ]]
 .column[.content[
-![](ppt_mtcars_files/figure-html/output_dotplot_6-1.png)&lt;!-- --&gt;
+&lt;img src="index_files/figure-html/output_dotplot_6-1.png" width="80%" style="display: block; margin: auto 0 auto auto;" /&gt;
 ]]
 ---
 class: split-40
@@ -592,7 +672,26 @@ ggplot(iris, aes(x = Sepal.Width, y = Sepal.Length))+
 ```
 ]]
 .column[.content[
-![](ppt_mtcars_files/figure-html/output_dotplot_7-1.png)&lt;!-- --&gt;
+&lt;img src="index_files/figure-html/output_dotplot_7-1.png" width="80%" style="display: block; margin: auto 0 auto auto;" /&gt;
+]]
+---
+class: split-40
+count: false
+.column[.content[
+
+```r
+ggplot(iris, aes(x = Sepal.Width, y = Sepal.Length))+  
+  geom_point()+  
+  aes(color = Species)+  
+  scale_color_brewer(palette="Dark2")+  
+  geom_jitter(width = 0.2, height = 0.1, alpha = 0.6)+  
+  theme_bw()+  
+  labs(col = "")+  
+* theme(legend.position="top")
+```
+]]
+.column[.content[
+&lt;img src="index_files/figure-html/output_dotplot_8-1.png" width="80%" style="display: block; margin: auto 0 auto auto;" /&gt;
 ]]
 
 ---
@@ -609,7 +708,7 @@ count: false
 ```
 ]]
 .column[.content[
-![](ppt_mtcars_files/figure-html/output_facet_plot_2-1.png)&lt;!-- --&gt;
+&lt;img src="index_files/figure-html/output_facet_plot_2-1.png" width="80%" style="display: block; margin: auto 0 auto auto;" /&gt;
 ]]
 ---
 class: split-40
@@ -623,7 +722,7 @@ ggplot(iris, aes(x = Sepal.Width, y = Sepal.Length))+
 ```
 ]]
 .column[.content[
-![](ppt_mtcars_files/figure-html/output_facet_plot_3-1.png)&lt;!-- --&gt;
+&lt;img src="index_files/figure-html/output_facet_plot_3-1.png" width="80%" style="display: block; margin: auto 0 auto auto;" /&gt;
 ]]
 ---
 class: split-40
@@ -638,7 +737,7 @@ ggplot(iris, aes(x = Sepal.Width, y = Sepal.Length))+
 ```
 ]]
 .column[.content[
-![](ppt_mtcars_files/figure-html/output_facet_plot_4-1.png)&lt;!-- --&gt;
+&lt;img src="index_files/figure-html/output_facet_plot_4-1.png" width="80%" style="display: block; margin: auto 0 auto auto;" /&gt;
 ]]
 ---
 class: split-40
@@ -654,7 +753,7 @@ ggplot(iris, aes(x = Sepal.Width, y = Sepal.Length))+
 ```
 ]]
 .column[.content[
-![](ppt_mtcars_files/figure-html/output_facet_plot_5-1.png)&lt;!-- --&gt;
+&lt;img src="index_files/figure-html/output_facet_plot_5-1.png" width="80%" style="display: block; margin: auto 0 auto auto;" /&gt;
 ]]
 ---
 class: split-40
@@ -671,7 +770,7 @@ ggplot(iris, aes(x = Sepal.Width, y = Sepal.Length))+
 ```
 ]]
 .column[.content[
-![](ppt_mtcars_files/figure-html/output_facet_plot_6-1.png)&lt;!-- --&gt;
+&lt;img src="index_files/figure-html/output_facet_plot_6-1.png" width="80%" style="display: block; margin: auto 0 auto auto;" /&gt;
 ]]
 ---
 class: split-40
@@ -689,7 +788,7 @@ ggplot(iris, aes(x = Sepal.Width, y = Sepal.Length))+
 ```
 ]]
 .column[.content[
-![](ppt_mtcars_files/figure-html/output_facet_plot_7-1.png)&lt;!-- --&gt;
+&lt;img src="index_files/figure-html/output_facet_plot_7-1.png" width="80%" style="display: block; margin: auto 0 auto auto;" /&gt;
 ]]
 ---
 class: split-40
@@ -708,7 +807,7 @@ ggplot(iris, aes(x = Sepal.Width, y = Sepal.Length))+
 ```
 ]]
 .column[.content[
-![](ppt_mtcars_files/figure-html/output_facet_plot_8-1.png)&lt;!-- --&gt;
+&lt;img src="index_files/figure-html/output_facet_plot_8-1.png" width="80%" style="display: block; margin: auto 0 auto auto;" /&gt;
 ]]
 ---
 class: split-40
@@ -728,12 +827,7 @@ ggplot(iris, aes(x = Sepal.Width, y = Sepal.Length))+
 ```
 ]]
 .column[.content[
-
-```
-## `geom_smooth()` using method = 'loess' and formula 'y ~ x'
-```
-
-![](ppt_mtcars_files/figure-html/output_facet_plot_9-1.png)&lt;!-- --&gt;
+&lt;img src="index_files/figure-html/output_facet_plot_9-1.png" width="80%" style="display: block; margin: auto 0 auto auto;" /&gt;
 ]]
 ---
 class: split-40
@@ -754,12 +848,7 @@ ggplot(iris, aes(x = Sepal.Width, y = Sepal.Length))+
 ```
 ]]
 .column[.content[
-
-```
-## `geom_smooth()` using method = 'loess' and formula 'y ~ x'
-```
-
-![](ppt_mtcars_files/figure-html/output_facet_plot_10-1.png)&lt;!-- --&gt;
+&lt;img src="index_files/figure-html/output_facet_plot_10-1.png" width="80%" style="display: block; margin: auto 0 auto auto;" /&gt;
 ]]
 ---
 class: split-40
@@ -776,16 +865,34 @@ ggplot(iris, aes(x = Sepal.Width, y = Sepal.Length))+
   labs(col = "")+  
   facet_wrap(~Species)+  
   geom_smooth(se = F)+  
-  geom_smooth(se= F, method = "lm", lty = "dotted")  
+  geom_smooth(se= F, method = "lm", lty = "dotted")+  
+* theme(legend.position="top")
 ```
 ]]
 .column[.content[
+&lt;img src="index_files/figure-html/output_facet_plot_11-1.png" width="80%" style="display: block; margin: auto 0 auto auto;" /&gt;
+]]
+---
+class: split-40
+count: false
+.column[.content[
 
+```r
+ggplot(iris, aes(x = Sepal.Width, y = Sepal.Length))+  
+  geom_point()+  
+  aes(color = Species)+  
+  scale_color_brewer(palette="Dark2")+  
+  geom_jitter(width = 0.2, height = 0.1, alpha = 0.6)+  
+  theme_bw()+  
+  labs(col = "")+  
+  facet_wrap(~Species)+  
+  geom_smooth(se = F)+  
+  geom_smooth(se= F, method = "lm", lty = "dotted")+  
+  theme(legend.position="top")  
 ```
-## `geom_smooth()` using method = 'loess' and formula 'y ~ x'
-```
-
-![](ppt_mtcars_files/figure-html/output_facet_plot_11-1.png)&lt;!-- --&gt;
+]]
+.column[.content[
+&lt;img src="index_files/figure-html/output_facet_plot_12-1.png" width="80%" style="display: block; margin: auto 0 auto auto;" /&gt;
 ]]
 
 ---
@@ -799,19 +906,20 @@ tt
 ```
 
 ```
-## 
-## 	Two Sample t-test
-## 
-## data:  x and y
-## t = -10.521, df = 98, p-value &lt; 2.2e-16
-## alternative hypothesis: true difference in means is not equal to 0
-## 95 percent confidence interval:
-##  -1.1054165 -0.7545835
-## sample estimates:
-## mean of x mean of y 
-##     5.006     5.936
+
+	Two Sample t-test
+
+data:  x and y
+t = -10.521, df = 98, p-value &lt; 2.2e-16
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -1.1054165 -0.7545835
+sample estimates:
+mean of x mean of y 
+    5.006     5.936 
 ```
 ---
+class: center, middle, inverse
 
 
 
@@ -821,11 +929,11 @@ summary(fit_aov)
 ```
 
 ```
-##              Df Sum Sq Mean Sq F value Pr(&gt;F)    
-## Species       2  437.1  218.55    1180 &lt;2e-16 ***
-## Residuals   147   27.2    0.19                   
-## ---
-## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+             Df Sum Sq Mean Sq F value Pr(&gt;F)    
+Species       2  437.1  218.55    1180 &lt;2e-16 ***
+Residuals   147   27.2    0.19                   
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ```
 
 ---
@@ -833,7 +941,7 @@ summary(fit_aov)
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script>var slideshow = remark.create({
-"ratio": "16:10",
+"ratio": "20:13",
 "highlightStyle": "github",
 "highlightLines": true,
 "countIncrementalSlides": false

@@ -9,7 +9,7 @@ output:
     lib_dir: libs
     css: ["shinobi", "ninjutsu"]
     nature:
-      ratio: 16:10
+      ratio: 20:13
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
@@ -21,6 +21,12 @@ class: center, middle
 
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
+
+knitr::opts_chunk$set(fig.width = 6, message = F, warning = F, out.width = "80%", 
+                      fig.align = "right", comment = "", 
+                      cache = F, dpi = 300)
+
+
 ```
 
 ---
@@ -38,6 +44,11 @@ source(file = "https://raw.githubusercontent.com/EvaMaeRey/little_flipbooks_libr
 
 ---
 
+```{r echo = FALSE, eval=TRUE}
+library(ggplot2)
+```
+
+
 ```{r univariate, echo = FALSE, eval = F, fig.height=5, warning = FALSE }
 ggplot(iris, aes(x = Sepal.Length))+
   geom_histogram(bins=50)+
@@ -46,7 +57,8 @@ ggplot(iris, aes(x = Sepal.Length))+
   geom_histogram(bins = 40)+
   aes(fill = Species)+
   scale_fill_brewer()+
-  labs(y = 'Number')
+  labs(y = 'Number')+
+  theme(legend.position="top")
 ```
 
 `r apply_reveal("univariate")`
@@ -63,7 +75,8 @@ ggplot(iris, aes(x = Sepal.Length))+
   theme_bw()+
   scale_color_grey()+ 
   theme_classic()+
-  scale_fill_brewer(palette="Dark2")
+  scale_fill_brewer(palette="Dark2")+
+  theme(legend.position="top")
 ```
 
 `r apply_reveal("density")`
@@ -76,7 +89,8 @@ ggplot(iris, aes(x = Species, fill = Species))+
   theme_bw()+
   scale_color_grey()+ 
   scale_fill_brewer(palette="Dark2")+
-  ylim(c(0, 75))
+  ylim(c(0, 75))+
+  theme(legend.position="top")
 ```
 
 `r apply_reveal("barplot")`
@@ -96,7 +110,8 @@ ggplot(iris, aes(x = Species, y = Sepal.Length))+
   aes(color = Species)+
   scale_color_brewer(palette="Dark2")+
   geom_jitter(width = 0.2, height = 0.1, alpha = 0.6)+
-  theme_bw()
+  theme_bw()+
+  theme(legend.position="top")
 ```
 
 `r apply_reveal("boxplot")`
@@ -109,7 +124,8 @@ ggplot(iris, aes(x = Sepal.Width, y = Sepal.Length))+
   scale_color_brewer(palette="Dark2")+
   geom_jitter(width = 0.2, height = 0.1, alpha = 0.6)+
   theme_bw()+
-  labs(col = "")
+  labs(col = "")+
+  theme(legend.position="top")
 ```
 
 `r apply_reveal("dotplot")`
@@ -126,7 +142,8 @@ ggplot(iris, aes(x = Sepal.Width, y = Sepal.Length))+
   labs(col = "")+
   facet_wrap(~Species)+
   geom_smooth(se = F)+
-  geom_smooth(se= F, method = "lm", lty = "dotted")
+  geom_smooth(se= F, method = "lm", lty = "dotted")+
+  theme(legend.position="top")
 ```
 
 
@@ -141,6 +158,7 @@ tt <- t.test(x, y, paired = FALSE, alternative = "two.sided", var.equal = TRUE)
 tt
 ```
 ---
+class: center, middle, inverse
 
 
 ```{r anova}
